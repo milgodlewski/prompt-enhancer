@@ -1,0 +1,24 @@
+{
+  "name": "prompt-enhancer",
+  "version": "1.0.0",
+  "description": "Enhance the context of given input with GPT-3",
+  "main": "script.js",
+  "scripts": {
+    "start": "http-server . -p 8000",
+    "build:css": "tailwindcss build tailwind.css -o styles.css"
+  },
+  "keywords": [
+    "gpt",
+    "gpt-3",
+    "gpt-4",
+    "prompt",
+    "enhancer"
+  ],
+  "author": "Milo",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
+  }
+}
