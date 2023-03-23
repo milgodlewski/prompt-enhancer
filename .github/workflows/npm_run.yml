@@ -27,6 +27,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: npm run
-        run: npm install | npm run start
+        run: npm install && npm run start
 
      
