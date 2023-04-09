@@ -2,10 +2,13 @@
   "name": "prompt-enhancer",
   "version": "1.0.0",
   "description": "Enhance the context of given input with GPT-3",
-  "main": "script.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "http-server . -p 8000",
-    "build:css": "tailwindcss build tailwind.css -o styles.css"
+    "start": "http-server ./dist -p 8000 --config=http-server.config.json",
+    "build:css": "tailwindcss build tailwind.css -o styles.css",
+    "copy:index": "copyfiles -u 1 src/index.html dist/",
+    "build": "tsc && npm run build:css && npm run copy:index",
+    "serve": "http-server ./dist -p 8000 --cors"
   },
   "keywords": [
     "gpt",
@@ -17,8 +20,14 @@
   "author": "Milo",
   "license": "MIT",
   "dependencies": {
+    "@types/node-fetch": "^2.6.3",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.2.7",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "http-server": "^14.1.1"
   }
 }

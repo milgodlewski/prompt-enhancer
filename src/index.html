@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Refinement with GPT-3</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-    <script src="script.js" type="module"></script>
+    <script defer type="module" src="./app.js"></script>
 </head>
 <body class="font-sans bg-gray-100 min-h-screen">
     <header class="bg-white shadow py-6">
@@ -14,6 +14,12 @@
         </div>
     </header>
     <main class="container mx-auto px-4 py-12">
+        <section class="mb-12 bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-2xl font-bold mb-4 text-blue-600">Select Model</h2>
+            <p class="text-gray-700">Please select the model you want to use for text refinement:</p>
+            <select id="modelSelection" class="mt-2 border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500">
+            </select>
+        </section>
         <section class="mb-12 bg-white shadow-md rounded-lg p-6">
             <h2 class="text-2xl font-bold mb-4 text-blue-600">Input Text</h2>
             <p class="text-gray-700">Please enter the text you want to refine:</p>
